@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(0, 0, 0, 0.95);
+  padding: 1.5rem 0;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.8rem;
+  color: #ff007a;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #00d4ff;
+}
+
+.nav-link {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  color: #fff !important;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #ff007a !important;
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.hero-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('https://w0.peakpx.com/wallpaper/87/963/HD-wallpaper-rohit-sharma.jpg') no-repeat center/cover;
+  opacity: 0.4;
+  z-index: -1;
+  animation: subtleZoom 20s infinite alternate;
+}
+
+@keyframes subtleZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+.animated-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 12rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(255, 0, 122, 0.8), 0 0 40px rgba(0, 212, 255, 0.6);
+  letter-spacing: 8px;
+  line-height: 1;
+}
+
+.hero-subtext {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  color: #00d4ff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
+}
+
+/* Geometric Shapes */
+.geometric-shape {
+  position: absolute;
+  pointer-events: none;
+  transition: transform 0.5s ease;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 150px solid rgba(255, 0, 122, 0.3);
+  top: 20%;
+  left: 10%;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.3), transparent);
+  border-radius: 50%;
+  bottom: 15%;
+  right: 15%;
+}
+
+.hexagon {
+  width: 180px;
+  height: 180px;
+  background: rgba(255, 0, 122, 0.2);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  top: 30%;
+  right: 20%;
+}
+
+/* Parallax Section */
+.parallax-section {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.parallax-bg {
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  z-index: -1;
+}
+
+.parallax-layer1 {
+  background: url('https://wallpapers.com/images/hd/rohit-sharm-on-cricket-game-2qurp5tfu4ck3opu.jpg') no-repeat center/cover;
+  opacity: 0.6;
+}
+
+.parallax-layer2 {
+  background: url('https://wallpapers.com/images/hd/rohit-sharm-on-cricket-game-2qurp5tfu4ck3opu.jpg') no-repeat center/cover;
+  opacity: 0.4;
+}
+
+.scroll-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 8rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(255, 0, 122, 0.8);
+  letter-spacing: 5px;
+}
+
+.scroll-subtext {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: #00d4ff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
+}
+
+/* General Sections */
+.about-section, .achievements-section, .gallery-section, .stats-section, .contact-section {
+  padding: 150px 0;
+  background: linear-gradient(180deg, #111, #000);
+  position: relative;
+}
+
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 6rem;
+  color: #ff007a;
+  text-shadow: 0 0 15px rgba(255, 0, 122, 0.8);
+  margin-bottom: 60px;
+  letter-spacing: 4px;
+}
+
+/* About Section */
+.about-text {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #ccc;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.about-img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+  transform: perspective(1000px) rotateY(10deg);
+  transition: transform 0.5s ease;
+}
+
+.about-img:hover {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+/* Achievements Section */
+.card {
+  border: none;
+  background: rgba(20, 20, 20, 0.9);
+  box-shadow: 0 0 20px rgba(255, 0, 122, 0.4);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  height: 400px; /* Fixed height for consistency */
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.6);
+}
+
+.card-img-wrapper {
+  height: 250px; /* Fixed height for image container */
+  overflow: hidden;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images scale uniformly */
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: #ff007a;
+}
+
+.card-text {
+  color: #ccc;
+}
+
+/* Gallery Section */
+.carousel-item img {
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+  transform: scale(0.95);
+  transition: transform 0.5s ease;
+}
+
+.carousel-item.active img {
+  transform: scale(1);
+}
+
+/* Stats Section */
+.table {
+  background: rgba(20, 20, 20, 0.9);
+  box-shadow: 0 0 20px rgba(255, 0, 122, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table th, .table td {
+  border: none;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.table th {
+  background: #ff007a;
+  text-shadow: 0 0 10px rgba(255, 0, 122, 0.8);
+}
+
+/* Contact Section */
+.form-control {
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid #ff007a;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 0, 122, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+  border-color: #00d4ff;
+  color: #fff;
+}
+
+.btn-primary {
+  background: #ff007a;
+  border: none;
+  padding: 12px 40px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  box-shadow: 0 0 15px rgba(255, 0, 122, 0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #00d4ff;
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .animated-text { font-size: 8rem; }
+  .hero-subtext { font-size: 1.8rem; }
+  .scroll-text { font-size: 5rem; }
+  .scroll-subtext { font-size: 1.5rem; }
+  .section-title { font-size: 4rem; }
+  .triangle { border-left: 70px solid transparent; border-right: 70px solid transparent; border-bottom: 100px solid rgba(255, 0, 122, 0.3); }
+  .circle { width: 150px; height: 150px; }
+  .hexagon { width: 130px; height: 130px; }
+  .card { height: 350px; }
+  .card-img-wrapper { height: 200px; }
+}
+
+@media (max-width: 576px) {
+  .animated-text { font-size: 5rem; }
+  .hero-subtext { font-size: 1.2rem; }
+  .scroll-text { font-size: 3rem; }
+  .scroll-subtext { font-size: 1rem; }
+  .section-title { font-size: 2.5rem; }
+  .about-section, .achievements-section, .gallery-section, .stats-section, .contact-section { padding: 80px 0; }
+  .card { height: 300px; }
+  .card-img-wrapper { height: 150px; }
+}
